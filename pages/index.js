@@ -19,14 +19,13 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-    <>
-      <Head >
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta charSet="utf-8" />
-          <title>{db.title}</title>
-          <meta property="og:image" content={db.bg} key="ogimage" />
-        </Head>
       <QuizBackground backgroundImage = {db.bg}>
+        <Head >
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <meta charSet="utf-8" />
+            <title>{db.title}</title>
+            <meta property="og:image" content={db.bg} key="ogimage" />
+          </Head>
         <QuizContainer>
           <Widget>
             <Widget.Header>
@@ -56,7 +55,6 @@ export default function Home() {
         </QuizContainer>
         <GitHubCorner projectUrl="https://github.com/XandeBarros/nextjs-animequiz"/>
       </QuizBackground>
-    </>
   );
 } 
 
