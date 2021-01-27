@@ -1,10 +1,10 @@
-import styled from 'styled-components'
-import db from '../db.json'
-import Widget from '../src/components/Widget'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GitHubCorner'
-import QuizBackground from '../src/components/QuizBackground'
-import Head from 'next/head'
+import React from 'react';
+import styled from 'styled-components';
+import db from '../db.json';
+import Widget from '../src/components/Widget';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
+import QuizBackground from '../src/components/QuizBackground';
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -19,53 +19,34 @@ export const QuizContainer = styled.div`
 
 export default function Home() {
   return (
-      <QuizBackground backgroundImage = {db.bg}>
-        <Head >
-            <title>{db.title}</title>
-            <link rel="icon" type="image/png" sizes="16x16" href="https://lh3.googleusercontent.com/proxy/eW0MrdjGcrr3M0t45Vnsyz1E-MnMLYknIoYdDHA95-IYSSNLZnBIRsDWzRFeC9xGfZY46RxRFJIHzOB69Z51bWyz8NhG7rflia0cQQwImulSjnCvp3_kT38_b1DMVHBsZJTdh1pzEoEVExU"/>
-            <meta charSet="utf-8" />
-            <meta property="og:image" content={db.bg} key="ogimage" />
-        </Head>
-        <QuizContainer>
-          <Widget>
-            <Widget.Header>
-              <h1>
-                Anime Quiz
-              </h1>
-            </Widget.Header>
-            <Widget.Content>
-              <p>
-                Só pergunta boa
-              </p>
-            </Widget.Content>
-          </Widget>
-          
-          <Widget>
-            <Widget.Content>
-              <h1>
-                  Quizes dos miguxos
-                </h1>
+    <QuizBackground backgroundImage={db.bg}>
+      <QuizContainer>
+        <Widget>
+          <Widget.Header>
+            <h1>
+              Anime Quiz
+            </h1>
+          </Widget.Header>
+          <Widget.Content>
+            <form onSubmit="">
+              <input placeholder="Digite seu nome de otaku..." />
+            </form>
+          </Widget.Content>
+        </Widget>
+        <Widget>
+          <Widget.Content>
+            <h1>
+              Quizes dos miguxos
+            </h1>
 
-                <p>
-                  Só quiz do bão
-                </p>
-            </Widget.Content>
-          </Widget>
-          <Footer />
-        </QuizContainer>
-        <GitHubCorner projectUrl="https://github.com/XandeBarros/nextjs-animequiz"/>
-      </QuizBackground>
+            <p>
+              Só quiz do bão
+            </p>
+          </Widget.Content>
+        </Widget>
+        <Footer />
+      </QuizContainer>
+      <GitHubCorner projectUrl="https://github.com/XandeBarros/nextjs-animequiz" />
+    </QuizBackground>
   );
-} 
-
-// export function Layout({pageTitle = db.title}) {
-//   return (
-//     <>
-//       <Head>
-//         <meta name="viewport" content="width=device-width, initial-scale=1" />
-//         <meta charSet="utf-8" />
-//         <title>Meu ovo</title>
-//       </Head>
-//     </>
-//   )
-// }
+}
