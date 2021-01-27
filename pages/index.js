@@ -22,7 +22,7 @@ export default function Home() {
       <QuizBackground backgroundImage = {db.bg}>
         <Head >
             <title>{db.title}</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <link rel="icon" type="image/png" sizes="16x16" href="https://lh3.googleusercontent.com/proxy/eW0MrdjGcrr3M0t45Vnsyz1E-MnMLYknIoYdDHA95-IYSSNLZnBIRsDWzRFeC9xGfZY46RxRFJIHzOB69Z51bWyz8NhG7rflia0cQQwImulSjnCvp3_kT38_b1DMVHBsZJTdh1pzEoEVExU"/>
             <meta charSet="utf-8" />
             <meta property="og:image" content={db.bg} key="ogimage" />
         </Head>
