@@ -54,28 +54,45 @@ Widget.Input = styled.input`
   display: block;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.mainBg};
-  border-radius: 4px;
+  border-radius: ${({ theme }) => theme.borderRadius};
   align-items: center;
   justify-content: center;
   font-size: 1rem;
   margin-bottom: 2rem;
   padding: 1rem;
+  outline: 0;
   color: ${({ theme }) => theme.colors.secondary};
 `;
 
 Widget.Button = styled.button`
+  border-radius: ${({ theme }) => theme.borderRadius};
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => theme.colors.secondary};
+  border: 0;
+
   position: relative;
   display: flex;
-  background-color: ${({ theme }) => theme.colors.secondary};
+  
   text-decoration: none;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
-  color: ${({ theme }) => theme.colors.contrastText};
+
+  outline: 0;
+  
   font-size: 1rem;
   font-family: Lato;
-  font-weight: 400;
+  font-weight: bold;
   padding: .8rem;
+
+  text-transform: uppercase;
+
+  cursor: pointer;
+  transition: .3s;
+
+  &:hover,
+  &:focus {
+    opacity: .5; 
+  }
 `;
 
 Widget.Form = styled.form`

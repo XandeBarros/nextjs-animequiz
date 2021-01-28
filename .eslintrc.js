@@ -22,5 +22,7 @@ module.exports = {
     'linebreak-style': [0, 'error', 'unix'],
     'react/react-in-jsx-scope': [0],
     'react/jsx-props-no-spreading': [0],
+    'import/extensions': [0],
+    'import/no-unresolved': [0],
   },
 };
