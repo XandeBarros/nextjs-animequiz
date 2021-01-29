@@ -58,7 +58,20 @@ Widget.Input = styled.input`
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  outline: 0;
+  color: ${({ theme }) => theme.colors.secondary};
+`;
+
+Widget.InputRadio = styled.input`
+  position: relative;
+  display: flex;
+  border: 1px solid ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }) => theme.colors.mainBg};
+  border-radius: ${({ theme }) => theme.borderRadius};
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
   padding: 1rem;
   outline: 0;
   color: ${({ theme }) => theme.colors.secondary};
@@ -70,6 +83,7 @@ Widget.Button = styled.button`
   background-color: ${({ theme }) => theme.colors.secondary};
   border: 0;
 
+  width: 100%;
   position: relative;
   display: flex;
   
@@ -79,6 +93,7 @@ Widget.Button = styled.button`
 
   outline: 0;
   
+  margin-top: 2rem;
   font-size: 1rem;
   font-family: Lato;
   font-weight: bold;
@@ -99,6 +114,26 @@ Widget.Form = styled.form`
 display: flex;
 flex-direction: column;
 justify-content: space-between;
+`;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => `${theme.colors.primary}40`};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+    
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
 `;
 
 export default Widget;
