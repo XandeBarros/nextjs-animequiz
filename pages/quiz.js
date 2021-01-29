@@ -30,11 +30,15 @@ function LoadingWidget() {
 }
 
 function ResultWidget({ results }) {
+  const segmentStr = window.location.search; // return segment1/segment2/segment3/segment4
+  const segmentArray = segmentStr.split('/');
+  const lastSegment = segmentArray.pop();
+
   return (
     <Widget>
       <Widget.Header>
         <h3>
-          Parabéns!!!
+          {`Parabéns!!! ${lastSegment.replace('?name=', '')}`}
         </h3>
       </Widget.Header>
       <Widget.Content>
