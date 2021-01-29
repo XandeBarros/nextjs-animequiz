@@ -108,12 +108,17 @@ Widget.Button = styled.button`
   &:focus {
     opacity: .5; 
   }
+
+  &:disabled {
+    background-color: #979797;
+    cursor: not-allowed;
+  }
 `;
 
 Widget.Form = styled.form`
-display: flex;
-flex-direction: column;
-justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 Widget.Topic = styled.a`
@@ -133,6 +138,27 @@ Widget.Topic = styled.a`
   &:hover,
   &:focus {
     opacity: .5;
+  }
+`;
+
+Widget.AlternativeForm = styled.form`
+  label {
+    &[data-selected="true"] {
+      background-color: ${({ theme }) => theme.colors.primary};
+      
+      &[data-status="SUCCESS"] {
+        background-color: ${({ theme }) => theme.colors.success};
+      }
+      &[data-status="ERROR"] {
+        background-color: ${({ theme }) => theme.colors.wrong};
+      }
+    }
+    &:focus {
+      opacity: 1;
+    } 
+  }
+  button {
+    margin-top: 24px;
   }
 `;
 
