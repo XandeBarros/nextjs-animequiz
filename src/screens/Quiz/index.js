@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizLogo from '../src/components/QuizLogo';
-import GitHubCorner from '../src/components/GitHubCorner';
-import QuizContainer from '../src/components/QuizContainer';
+// import db from '../../../db.json';
+import Widget from '../../components/Widget';
+import QuizBackground from '../../components/QuizBackground';
+import QuizLogo from '../../components/QuizLogo';
+import GitHubCorner from '../../components/GitHubCorner';
+import QuizContainer from '../../components/QuizContainer';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 function LoadingWidget() {
   return (
@@ -89,6 +90,7 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
+        <BackLinkArrow href="/" />
         <h3>
           {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
         </h3>
@@ -119,7 +121,7 @@ function QuestionWidget({
               onSubmit();
               setIsQuestionSubmited(false);
               setSelectedAlternative(undefined);
-            }, 3 * 1000);
+            }, 1.5 * 1000);
           }}
         >
           {question.alternatives.map((alternative, alternativeIndex) => {
@@ -147,8 +149,8 @@ function QuestionWidget({
           <Widget.Button type="submit" disabled={!hasAlternativeSelected}>
             CONFIRMAR
           </Widget.Button>
-          {isQuestionSubmited && isCorrect && <Widget.P>Você acertou!</Widget.P>}
-          {isQuestionSubmited && !isCorrect && <Widget.P>Você errou!</Widget.P>}
+          {isQuestionSubmited && isCorrect && <h3>Você acertou!</h3>}
+          {isQuestionSubmited && !isCorrect && <h3>Você errou!</h3>}
         </Widget.AlternativeForm>
       </Widget.Content>
     </Widget>
@@ -161,13 +163,13 @@ const screenStates = {
   result: 'result',
 };
 
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBg }) {
   const [screenState, setScreenState] = React.useState(screenStates.loading);
   const [results, setResults] = React.useState([]);
-  const totalQuestions = db.questions.length;
   const [currentQuestion, setQuestionIndex] = React.useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const totalQuestions = externalQuestions.length;
 
   function addResult(result) {
     setResults([
@@ -192,7 +194,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={externalBg}>
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.quiz && (

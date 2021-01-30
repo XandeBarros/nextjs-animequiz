@@ -65,7 +65,7 @@ Widget.Input = styled.input`
 
 Widget.InputRadio = styled.input`
   position: relative;
-  display: flex;
+  display: none;
   border: 1px solid ${({ theme }) => theme.colors.primary};
   background-color: ${({ theme }) => theme.colors.mainBg};
   border-radius: ${({ theme }) => theme.borderRadius};

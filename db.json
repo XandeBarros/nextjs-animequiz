@@ -1,7 +1,7 @@
 {
     "bg": "https://i1.wp.com/www.selectgame.com.br/wp-content/uploads/2019/10/Hashiras-de-Kimetsu-no-Yaiba-Wallpaper-Full-HD-Demon-Slayer.jpg?ssl=1",
     "title": "Anime Quiz | Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "description": "Teste o que você acha que sabe sobre animes de HxH até SNK, contém alguns poucos spoilers!!!",
     "questions": [
       {
         "image": "https://www.teahub.io/photos/full/224-2241805_hunter-x-hunter-gon-killua-kurapika-leorio.jpg",
@@ -26,10 +26,58 @@
            "Flauta Doce",
            "Melodica"
         ]
+      },
+      {
+        "image": "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/0/0a/Giyu_using_Eleventh_Form_on_Rui%27s_attack.gif/revision/latest?cb=20190817181028",
+        "title": "Quantas formas têm a respiração da água? (Kimetsu no Yaiba)",
+        "description": "Dica no episódio 20 ;)",
+        "answer": 2,
+        "alternatives": [
+           "3 formas",
+           "10 formas",
+           "11 formas",
+           "7 formas"
+        ]
+      },
+      {
+        "image": "https://static.wikia.nocookie.net/shingekinokyojin/images/1/15/Reiss_family_%28Anime%29.png/revision/latest?cb=20180826191655",
+        "title": "Quem é o culpado pelo massacre da família Reiss? (Shingeki no Kyojin)",
+        "description": "Temporada cheia de revelações ;)",
+        "answer": 1,
+        "alternatives": [
+           "Zeke Yeager",
+           "Eren Yeager",
+           "Grisha Yeager",
+           "Reiner, Bertold e Annie"
+        ]
+      },
+      {
+        "image": "https://poltronanerd.com.br/wp-content/uploads/2018/01/poltrona-fullmetal-alchemist.jpg",
+        "title": "Em 'Fullmetal Alchemist: Brotherhood' Edward concede algo em troca do corpo de seu irmão, o que ele oferece?",
+        "description": "Sempre choro nessa parte do anime ;)",
+        "answer": 0,
+        "alternatives": [
+           "Sua própria alquimia",
+           "Um perna",
+           "Um braço",
+           "Anos de sua vida"
+        ]
+      },
+      {
+        "image": "https://metagalaxia.com.br/wp-content/uploads/2019/01/the-promised-neverland-yakosoku-no-neverland-resenha-epis%C3%B3dios-1-e-2-12.jpg",
+        "title": "Em 'Yakusoku no Neverland' qual nome da primeira criança adotada do orfanato em que se passam os acontecimentos principais?",
+        "description": "Adotada talvez não seja a palavra certa...",
+        "answer": 0,
+        "alternatives": [
+           "Connie",
+           "Carol",
+           "Leslie",
+           "Rebeca"
+        ]
       }
     ],
     "external": [
-      ""
+      "https://quiz-justiceleague.levi-magny.vercel.app/"
     ],
     "theme": {
       "colors": {
